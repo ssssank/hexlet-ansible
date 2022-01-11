@@ -7,3 +7,8 @@
         state: present
         update_cache: yes
       become: yes
+      tags: install
+    - name: update apt cache
+      ansible.builtin.apt:
+        update_cache: yes
+      tags: config
