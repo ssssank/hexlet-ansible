@@ -6,3 +6,13 @@
         name: git
         state: absent
       become: yes
+
+    - name: delete git config
+      ansible.builtin.file:
+        path: "/home/{{ item }}/.gitconfig"
+        state: absent
+      loop:
+        - jaime
+        - sansa
+        - robert
+      become: yes
