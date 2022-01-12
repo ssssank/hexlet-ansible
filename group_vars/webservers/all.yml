@@ -1,3 +1,5 @@
 root_dir: /usr/share/nginx/html
 nginx_port: 80
 server_name: "{{ ansible_hostname }}"
+string: "This is {{ ansible_hostname }}"
+date: ansible_date_time
