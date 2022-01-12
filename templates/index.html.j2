@@ -10,5 +10,10 @@
   <h1>Hello World!</h1>
   <h2>{{ string | upper }}!</h2>
   <p>Deployed at: {{ '%Y-%m-%d %H:%M:%S' | strftime(ansible_date_time.epoch) }}</p>
+  <pre>
+    <code>
+      {{ cowsay_result.stdout }}
+    </code>
+  </pre>
 </body>
 </html>

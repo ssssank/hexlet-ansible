@@ -4,8 +4,12 @@
       ansible.builtin.apt:
         name: nginx
         state: latest
+        name: cowsay
       become: yes
       when: ansible_distribution == "Ubuntu"
+
+    - ansible.builtin.command: cowsay "Hello, from web server!"
+      register: cowsay_result
 
     - name: update nginx config
       ansible.builtin.template:
