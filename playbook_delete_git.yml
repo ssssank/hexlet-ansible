@@ -6,6 +6,7 @@
         name: git
         state: absent
       become: yes
+      when: ansible_distribution == "Ubuntu"
 
     - name: delete git config
       ansible.builtin.file:

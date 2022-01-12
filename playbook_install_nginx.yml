@@ -5,6 +5,7 @@
         name: nginx
         state: latest
       become: yes
+      when: ansible_distribution == "Ubuntu"
 
     - name: update nginx config
       ansible.builtin.template:
