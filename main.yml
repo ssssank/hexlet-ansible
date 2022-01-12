@@ -1,0 +1,5 @@
+- name: Include install nginx
+  import_playbook: playbook_install_nginx.yml
+
+- name: Include install git
+  import_playbook: playbook_install_git.yml
